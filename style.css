@@ -14,4 +14,6 @@ p, li { color: #A9AFB7; }
 .links { list-style: none; padding: 0; }
 .links li { margin: 8px 0; }
 .updated { color: #8F959E; font-size: 14px; }
+.button { display: inline-block; padding: 12px 24px; border-radius: 12px; background: #FFB300; color: #16181B; font-weight: 800; text-decoration: none; }
+.hidden { display: none; }
 footer { margin-top: 48px; color: #8F959E; font-size: 14px; }

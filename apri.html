@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludles</title>
+<meta name="description" content="Trova compagni con cui giocare in co-op online. · Find teammates to play online co-op with.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ludles">
+<meta property="og:description" content="Trova compagni con cui giocare in co-op online. · Find teammates to play online co-op with.">
+<meta property="og:image" content="https://gamabushi.github.io/ludles-site/icona.png">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section class="hero">
+<img src="logo.svg" alt="Ludles">
+<h1>Ludles</h1>
+<p id="message"></p>
+<p><a id="open" class="button hidden" href="https://gamabushi.github.io/ludles-site/"></a></p>
+<p><a id="download" href="https://play.google.com/store/apps/details?id=com.ludles.app"></a></p>
+</section>
+</main>
+<script>
+const TEXTS = {"it":{"android":"Stiamo aprendo Ludles… Se non si apre, tocca il pulsante qui sotto.","other":"Ludles è un’app per Android: apri questo link dal telefono.","open":"Apri in Ludles","download":"Non hai Ludles? Scaricala da Google Play"},"en":{"android":"Opening Ludles… If it doesn’t open, tap the button below.","other":"Ludles is an Android app: open this link on your phone.","open":"Open in Ludles","download":"Don’t have Ludles? Get it on Google Play"}};
+const texts = (navigator.language || 'it').toLowerCase().startsWith('it') ? TEXTS.it : TEXTS.en;
+document.documentElement.lang = texts === TEXTS.it ? 'it' : 'en';
+// Solo le schermate che l'app condivide: un link modificato a mano non apre altro
+const asked = new URLSearchParams(location.search).get('p') || '';
+const screen = /^\/(profile|lobby|post|news)\/[A-Za-z0-9-]+$/.test(asked) ? asked : '/';
+const isAndroid = /android/i.test(navigator.userAgent);
+document.getElementById('download').textContent = texts.download;
+if (isAndroid) {
+  // "intent:" apre ludles://<schermata> nell'app; senza l'app, Android va alla pagina di Google Play
+  const appLink = 'intent:/' + screen + '#Intent;scheme=ludles;package=com.ludles.app;S.browser_fallback_url=' +
+    encodeURIComponent('https://play.google.com/store/apps/details?id=com.ludles.app') + ';end';
+  const button = document.getElementById('open');
+  button.href = appLink;
+  button.textContent = texts.open;
+  button.classList.remove('hidden');
+  document.getElementById('message').textContent = texts.android;
+  location.href = appLink;
+} else {
+  document.getElementById('message').textContent = texts.other;
+}
+</script>
+</body>
+</html>
