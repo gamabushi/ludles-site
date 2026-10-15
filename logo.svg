@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+<defs><mask id="righette" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="600">
+<rect width="600" height="600" fill="white"/><g fill="black"><g transform="translate(392 482) rotate(0)"><rect x="12.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="38.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="64.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="93" y="-13.75" width="14" height="5" rx="2.5"/><rect x="93" y="-2.50" width="14" height="5" rx="2.5"/><rect x="93" y="8.75" width="14" height="5" rx="2.5"/></g><g transform="translate(186 222) rotate(145.5)"><rect x="12.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="38.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="64.00" y="-22.0" width="6" height="44" rx="3.0"/><rect x="93" y="-13.75" width="14" height="5" rx="2.5"/><rect x="93" y="-2.50" width="14" height="5" rx="2.5"/><rect x="93" y="8.75" width="14" height="5" rx="2.5"/></g></g>
+</mask></defs>
+<g mask="url(#righette)" fill="#FFB300">
+<path fill="none" stroke="#FFB300" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" d="M186 222 C250 178 408 165 402 108 C397 62 325 58 310 108 C296 152 292 262 265 360 C251 410 236 444 214 466 C180 500 112 518 98 472 C86 428 172 424 245 460 C300 482 355 487 392 482"/>
+<g transform="translate(392 482) rotate(0)"><rect x="-8" y="-38.0" width="98" height="76" rx="16"/><rect x="88" y="-20.0" width="22" height="40" rx="6"/></g><g transform="translate(186 222) rotate(145.5)"><rect x="-8" y="-38.0" width="98" height="76" rx="16"/><rect x="88" y="-20.0" width="22" height="40" rx="6"/></g>
+</g>
+</svg>
